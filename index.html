@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicio de Taxi</title>
+  <link rel="stylesheet" href="Css/Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header id="header">
+    <h1>Servicio de Taxi</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#flota">Vehiculo</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#comentarios">Comentarios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero fade-in">
+    <h2>Tu viaje seguro y confiable en Aguazul, Casanare</h2>
+    <p>Comunícate con nosotros para un servicio rápido y cómodo.</p>
+    <a href="https://wa.me/573204911603?text=Quiero%20solicitar%20un%20servicio%20de%20taxi" class="btn-whatsapp btn-whatsapp-hero" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+  </section>
+
+  <section id="servicios" class="servicios fade-in">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-container">
+      <div class="card">
+        <i class="fa-solid fa-city fa-2x"></i>
+        <h3>Viajes Urbanos</h3>
+        <p>Transporte rápido y seguro dentro de Aguazul.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-road fa-2x"></i>
+        <h3>Viajes Intermunicipales</h3>
+        <p>Desplázate a ciudades cercanas con comodidad.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <h3>Mensajería</h3>
+        <p>Envío de documentos y paquetes pequeños.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-clock fa-2x"></i>
+        <h3>Disponibilidad 24/7</h3>
+        <p>Siempre listos para atenderte en cualquier momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="flota" class="flota fade-in">
+    <h2>Nuestro Vehiculo</h2>
+    <div class="flota-container">
+      <div class="flota-item">
+        <img src="Img/taxi1.jpg" alt="Taxi moderno">
+      </div>
+      <div class="flota-item">
+        <img src="Img/taxi2.jpg" alt="Taxi cómodo y seguro">
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonios fade-in">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonios-container">
+      <div class="testimonio active">
+        <p>"Excelente servicio, muy puntual y amable."</p>
+        <h4>- Juan Pérez</h4>
+      </div>
+      <div class="testimonio">
+        <p>"100% recomendado."</p>
+        <h4>- María Gómez</h4>
+      </div>
+      <div class="testimonio">
+        <p>"Confiable y rápido, justo lo que necesito."</p>
+        <h4>- Carlos López</h4>
+      </div>
+    </div>
+  </section>
+
+<section id="comentarios" class="comentarios fade-in">
+  <h2>Formulario de Contacto</h2>
+  <form id="form-contacto">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="tel" id="telefono" placeholder="Tu número de teléfono" maxlength="10" required>
+
+    <select id="genero" required>
+      <option value="" disabled selected>Selecciona tu género</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+      <option value="Otro">Otro</option>
+      <option value="Prefiero no decir">Prefiero no decir</option>
+    </select>
+
+    <input type="number" id="edad" placeholder="Tu edad" min="1" max="120" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+
+  <section id="contacto" class="contacto fade-in">
+    <h2>Contacto</h2>
+    <p><i class="fa-solid fa-phone"></i> Tel: 3204911603</p>
+    <p><i class="fa-solid fa-envelope"></i> Email: gutierrez355@hotmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Servicio de Taxi - Aguazul, Casanare</p>
+  </footer>
+
+   <a href="https://wa.me/573204911603?text=Quiero%20solicitar%20un%20servicio%20de%20taxi"  class="btn-whatsapp-flotante" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js"></script>
+  <script src="js/js.js"></script>
+</body>
+</html>
