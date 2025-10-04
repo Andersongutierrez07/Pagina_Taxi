@@ -8,6 +8,8 @@ if (form) {
     const telefono = document.getElementById("telefono").value.trim();
     const genero = document.getElementById("genero").value;
     const edad = document.getElementById("edad").value.trim();
+    const direccion = document.getElementById("direccion").value.trim();
+
 
     const regexNombre = /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)+$/;
     if (!regexNombre.test(nombre)) {
@@ -35,6 +37,7 @@ if (form) {
     const numeroWhatsApp = "573204911603";
 
     const texto = ` Necesito un servicio de taxi.%0A
+  Dirección: ${direccion}%0A
   Nombre: ${nombre}%0A
   Teléfono: ${telefono}%0A
   Género: ${genero}%0A
@@ -46,3 +49,13 @@ if (form) {
     form.reset();
   });
 }
+
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+faders.forEach(fade => observer.observe(fade));
