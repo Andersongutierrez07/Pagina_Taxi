@@ -377,3 +377,9 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
+}
