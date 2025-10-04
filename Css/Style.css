@@ -394,4 +394,13 @@ html {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    position: static !important;
+    top: auto !important;
+    width: 100%;
+  }
+}
+
+
 
