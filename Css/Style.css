@@ -383,3 +383,15 @@ html {
     position: static;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative !important;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+
