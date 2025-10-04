@@ -2,135 +2,131 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  line-height: 1.6;
-  color: #333;
-  background: linear-gradient(135deg, #fff4d9 0%, #fbe9a1 100%);
+  color: #fff;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2d2d2d 100%);
   overflow-x: hidden;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-
-
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-body > *:not(#particles-js) {
-  position: relative;
-  z-index: 1;
+  scroll-behavior: smooth;
 }
 
 header {
-  background: #111;
-  color: #fff;
+  background: rgba(17, 17, 17, 0.9);
+  color: #f1c40f;
   padding: 20px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 header h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
-  transition: 0.3s;
+  padding: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f1c40f;
+  transition: width 0.3s;
 }
 
 nav ul li a:hover {
-  background: #f1c40f;
-  border-radius: 8px;
-  transform: scale(1.1);
+  color: #f1c40f;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 .hero {
-  text-align: center;
-  padding: 80px 20px;
   position: relative;
-  overflow: hidden;
+  text-align: center;
+  padding: 120px 20px;
+  background-image: url('../Img/taxi1.jpg');
+  background-size: cover;
+  background-position: center;
   color: #fff;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(243, 156, 18, 0.6), rgba(241, 196, 15, 0.6));
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(241,196,15,0.4));
   z-index: 0;
 }
 
-.hero h2,
-.hero p,
-.hero a {
+.hero-content {
   position: relative;
   z-index: 1;
 }
 
-
 .hero h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  color: #f1c40f;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
   margin-bottom: 15px;
 }
 
 .hero p {
-  margin-bottom: 25px;
   font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 25px;
 }
 
-.btn-whatsapp {
+.btn-principal {
   display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 15px 30px;
+  background: linear-gradient(45deg, #f1c40f, #ffb400);
+  color: #111;
+  padding: 15px 35px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
   transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  z-index: 3;
 }
 
-.btn-whatsapp:hover {
+.btn-principal:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
 .servicios {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
+  background: #222;
 }
 
 .servicios h2 {
-  margin-bottom: 30px;
+  color: #f1c40f;
   font-size: 2rem;
-  color: #111;
+  margin-bottom: 30px;
 }
 
 .servicios-container {
@@ -140,51 +136,35 @@ nav ul li a:hover {
 }
 
 .card {
-  background: linear-gradient(145deg, #fffacd, #ffe066);
+  background: #2b2b2b;
   padding: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
   transition: all 0.4s ease;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  cursor: pointer;
+  border: 1px solid rgba(241,196,15,0.3);
 }
 
 .card i {
-  color: #f39c12;
+  color: #f1c40f;
   margin-bottom: 15px;
-  transition: all 0.4s;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #555;
 }
 
 .card:hover {
-  transform: rotateX(5deg) rotateY(5deg) translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  background: linear-gradient(145deg, #f1c40f, #f39c12);
-}
-
-.card:hover i {
-  transform: rotate(20deg) scale(1.2);
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, #f1c40f, #ffb400);
+  color: #111;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
 .flota {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
-  background: #fff8e1;
+  background: #1b1b1b;
 }
 
 .flota h2 {
+  color: #f1c40f;
   margin-bottom: 30px;
-  font-size: 2rem;
-  color: #111;
 }
 
 .flota-container {
@@ -199,198 +179,201 @@ nav ul li a:hover {
   max-width: 350px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.flota-item:hover {
+  transform: scale(1.05);
 }
 
 .flota-item img {
   width: 100%;
   height: auto;
+  object-fit: contain;
+  border-radius: 10px;
   display: block;
-  transition: transform 0.4s ease;
-}
-
-.flota-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-.flota-item:hover img {
-  transform: scale(1.1);
 }
 
 .testimonios {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
-  background: #fff8e1;
+  background: #222;
+}
+
+.testimonios h2 {
+  color: #f1c40f;
+  margin-bottom: 30px;
 }
 
 .testimonios-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .testimonio {
-  background: #fff;
+  background: #2d2d2d;
   padding: 25px;
   border-radius: 15px;
   width: 250px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: all 0.4s;
-  opacity: 0.5;
-}
-
-.testimonio.active {
-  opacity: 1;
-  transform: scale(1.05);
+  color: #eee;
+  transition: all 0.3s;
 }
 
 .testimonio:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  background: #f1c40f;
+  color: #111;
 }
 
 .comentarios {
-  padding: 60px 20px;
-  background: #f4f4f4;
+  padding: 70px 20px;
   text-align: center;
+  background: #1b1b1b;
 }
 
 .comentarios h2 {
+  color: #f1c40f;
   margin-bottom: 25px;
 }
 
 .comentarios form {
   max-width: 500px;
-  margin: 0 auto 25px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .comentarios input,
-.comentarios textarea {
+.comentarios select {
   padding: 14px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
+  background: #2b2b2b;
+  color: #fff;
 }
 
 .comentarios button {
   padding: 14px;
   border: none;
   border-radius: 10px;
-  background: #f1c40f;
+  background: linear-gradient(45deg, #f1c40f, #ffb400);
   font-weight: bold;
+  color: #111;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .comentarios button:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-#lista-comentarios {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.comentario {
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .contacto {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
-  background: #fff;
+  background: #222;
+  color: #eee;
+}
+
+.contacto h2 {
+  color: #f1c40f;
+  margin-bottom: 15px;
 }
 
 footer {
   background: #111;
-  color: #fff;
+  color: #f1c40f;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  font-weight: 500;
 }
 
-.btn-whatsapp-flotante {
-  position: fixed !important;
-  bottom: 25px !important;
-  right: 25px !important;
-  left: auto !important;
-  background: #25D366;
-  color: #fff;
-  font-size: 2rem;
-  width: 56px;
-  height: 56px;
-  padding: 0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  z-index: 2147483647 !important;
-  pointer-events: auto;
-  cursor: pointer;
+footer .redes a {
+  color: #25D366;
+  margin: 0 8px;
+  font-size: 1.8rem;
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
-.btn-whatsapp-flotante i {
-  margin: 0;
-  font-size: 1.4rem;
-  line-height: 1;
-}
-
-.btn-whatsapp-flotante:hover {
-  transform: scale(1.2) !important;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4) !important;
+footer .redes a:hover {
+  color: #1ebe5b;
+  transform: scale(1.2);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+.btn-whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(45deg, #25D366, #1ebe5b);
+  color: #fff;
+  font-size: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.btn-whatsapp-flotante:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
   }
-
+  .hero h2 {
+    font-size: 1.8rem;
+  }
   .servicios-container {
     grid-template-columns: 1fr;
   }
-
-  .testimonios-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flota-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.comentarios select {
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #333;
 }
 
-body {
-  background: linear-gradient(135deg, #f8e7b5 0%, #fff3cd 100%);
+.btn-footer-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #25D366, #1ebe5b);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
 }
 
-.flota,
-.testimonios,
-.comentarios,
-.contacto {
-  background: transparent;
+.btn-footer-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+html {
+  scroll-behavior: smooth;
 }
